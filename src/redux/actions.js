@@ -7,6 +7,10 @@ const actions = {
     }),
     toggleCartHidden: () => ({
         type: actionTypes.TOGGLE_CART_HIDDEN
+    }),
+    addItem: (item) => ({
+        type: actionTypes.ADD_ITEM,
+        payload: item
     })
 }
 
