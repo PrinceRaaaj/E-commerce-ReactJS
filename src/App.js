@@ -6,7 +6,7 @@ import {Switch, Route, Redirect} from "react-router-dom"
 import Header from "./Components/header/Header"
 import SignInAndSignUp from "./pages/SignInAndSignUp/SignInAndSignUp"
 import { auth, createUserProfileDocument } from "./firebase/firebaseUtils"
-import { setCurrentUser } from "./redux/actions"
+import actions from "./redux/actions"
 import { connect } from "react-redux"
 
 
@@ -56,6 +56,6 @@ const mapStateToProps = state => ({
 })
 
 const mapDispatchToProps = dispatch => ({
-    setCurrentUser: user => dispatch(setCurrentUser(user))
+    setCurrentUser: user => dispatch(actions.setCurrentUser(user))
 })
 export default connect(mapStateToProps, mapDispatchToProps)(App)
