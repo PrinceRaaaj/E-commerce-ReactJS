@@ -11,6 +11,14 @@ const actions = {
     addItem: (item) => ({
         type: actionTypes.ADD_ITEM,
         payload: item
+    }),
+    deleteItemFromCart: (ItemId) => ({
+        type: actionTypes.DELETE_ITEM_FROM_CART,
+        payload: ItemId
+    }),
+    removeItem: (item) => ({
+        type: actionTypes.REMOVE_ITEM,
+        payload: item
     })
 }
 
