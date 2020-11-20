@@ -8,7 +8,7 @@ import SignInAndSignUp from "./pages/SignInAndSignUp/SignInAndSignUp"
 import { auth, createUserProfileDocument } from "./firebase/firebaseUtils"
 import actions from "./redux/actions"
 import { connect } from "react-redux"
-
+import Checkout from "./pages/Checkout/Checkout"
 
 class App extends React.Component{
 
@@ -44,7 +44,8 @@ class App extends React.Component{
             <Route exact path="/" component={Homepage} />
             <Route path="/shop/:productName" component={this.HatPage} />
             <Route path="/shop" component={Shop} />
-            <Route path="/signin" render={() => this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUp /> } />
+            <Route exact path="/signin" render={() => this.props.currentUser ? <Redirect to="/" /> : <SignInAndSignUp /> } />
+            <Route path="/checkout" component={Checkout} />
         </Switch>
     </div>
     }
